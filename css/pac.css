@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+
+.smallDot{
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute !important;
+}
+.pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #FFD424;
+  border-left: 8px solid #FFD424;
+  border-bottom: 8px solid #FFD424;
+  border-radius: 60px;
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+}
+.pacman.pacman-left{
+  border-right: 8px solid #FFD424;
+  border-top: 8px solid #FFD424;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid #FFD424;
+}
+.pacman.pacman-down{
+  border-right: 8px solid #FFD424;
+  border-top: 8px solid transparent;
+  border-left: 8px solid #FFD424;
+  border-bottom: 8px solid #FFD424;
+}
+.pacman.pacman-up{
+  border-right: 8px solid #FFD424;
+  border-top: 8px solid #FFD424;
+  border-left: 8px solid #FFD424;
+  border-bottom: 8px solid transparent;
+}
+
+
+.chomp {
+	border-right: 6px solid transparent !important;
+}
+.chomp-vertical{
+	border-top: 6px solid transparent !important;
+}

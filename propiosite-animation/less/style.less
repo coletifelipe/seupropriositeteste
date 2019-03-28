@@ -1,0 +1,67 @@
+body{
+	margin: 0;
+	padding: 0;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #f8f8f8;
+}
+
+h1{
+	position: absolute;
+	z-index: 5;
+	text-align: center;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(1vw + 1vh + 2.8vmin);
+	white-space: nowrap;
+	&:after{
+		content: 'Boring';
+		font-size: calc(1vw + 1vh + 2.8vmin);
+		margin-left: 3%;
+		background: #ddd6f3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		-webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	}
+}
+
+.hoverbox{
+	width: 25%;
+	height: 100vh;
+	position: relative;
+	z-index: 10;
+	.newword(1, 'Exciting', #96DEDA, #50C9C3);
+	.newword(2, 'Fun', #c21500, #ffc500);
+	.newword(3, 'Boring', #faaca8, #ddd6f3);
+	.newword(4, 'Unresponsive', #414d0b, #727a17);
+	.newword(5, 'Challenging', #e43a15, #e65245);
+	.newword(6, 'Pure', #ED4264, #FFEDBC);
+	.newword(7, 'Available', #DC2424, #4A569D);
+	.newword(8, 'Slow', #757F9A, #D7DDE8);
+	.newword(9, 'Modular', #2BC0E4, #EAECC6);
+	.newword(10, 'Powerful', #4776E6, #8E54E9);
+	.newword(11, 'Offline Ready', #1D976C, #93F9B9);
+	.newword(12, 'Open', #EB3349, #F45C43);
+	.newword(13, 'New', #DD5E89, #F7BB97);
+	.newword(14, 'Communities', #1D2B64, #F8CDDA);
+	.newword(15, 'Storefronts', #F09819, #EDDE5D);
+	.newword(16, 'Just The Start', #E55D87, #5FC3E4);
+}
+
+.newword(@i, @word, @color1, @color2) {
+  &.hover_@{i}:hover{
+		~ h1{
+			&:after{
+				content: @word;
+				background: linear-gradient(to right, @color1, @color2);
+				-webkit-background-clip: text;
+			}
+		}
+	}
+}
